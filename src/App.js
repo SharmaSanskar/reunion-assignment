@@ -1,24 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import UserInput from "./components/UserInput";
+import Properties from "./components/Properties";
+import { PropertyProvider } from "./contexts/PropertyContext";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <PropertyProvider>
+      <div className="min-h-screen px-12 py-8 bg-gray-100">
+        <h2 className="text-center font-bold text-3xl mb-10 text-purple-600">
+          reunion
+        </h2>
+        <UserInput />
+        <Properties />
+      </div>
+    </PropertyProvider>
   );
 }
 
